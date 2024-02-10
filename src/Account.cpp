@@ -32,6 +32,7 @@ void Account::displayAccount() {
     cout << "Account number:" << account_number << endl;
     cout << "Account Name:" << name << endl;
     cout << "Account type: " << type << endl;
+    cout << "Account Balance: " << deposit << endl;
 }
 
 
