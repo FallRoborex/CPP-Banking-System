@@ -1,6 +1,6 @@
 <h1>C++ Banking System</h1>
 
-# This project is intended to learn basic C++ syntax and will surve as my very first big project.
+This project is intended to learn basic C++ syntax and will surve as my very first big project.
 
 <h2>Goals</h2>
 
