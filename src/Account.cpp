@@ -5,13 +5,13 @@ class Account
 
 private:
     char name[50];
-    int deposit;
+    double deposit;
     char type;
     int account_number;
 
 public:
     void createAccount();
-    void displayAccount();
+    void displayAccount() const;
 };
 
 
@@ -28,7 +28,7 @@ void Account::createAccount()
     account_number++;
 }
 
-void Account::displayAccount() {
+void Account::displayAccount() const{
     cout << "Account number:" << account_number << endl;
     cout << "Account Name:" << name << endl;
     cout << "Account type: " << type << endl;
