@@ -2,40 +2,37 @@
 
 class Account
 {
-    int account_number;
+
+private:
     char name[50];
     int deposit;
     char type;
-
+    int account_number;
 
 public:
     void createAccount();
     void displayAccount();
-    
 };
+
 
 void Account::createAccount()
 {
-    cout <<"\n Enter an account number: ";
-    cin >> account_number;
-    cout << "\n Enter the name of the account holder only 50 characters allowed: ";
-    cin.ignore();
+    cout << "\nEnter the name of the account holder only 50 characters allowed: ";
     cin.getline(name, 50);
-    cout << "\n Enter Type of account checking or savings. (C/S): ";
+    cout << "\nEnter Type of account checking or savings. (C/S): ";
     cin >> type;
     type = toupper(type);
     cout << "Enter the Initial amount of money you want to start the account with. (Saving => 5) (Checking => 10): ";
     cin >> deposit;
-    cout << "The account have been created";
+    cout << "The account have been created" << endl;
+    account_number++;
 }
 
 void Account::displayAccount() {
     cout << "Account number:" << account_number << endl;
     cout << "Account Name:" << name << endl;
-    cout << "Account type: " << name << endl;
+    cout << "Account type: " << type << endl;
 }
-
-
 
 
 int main() {
