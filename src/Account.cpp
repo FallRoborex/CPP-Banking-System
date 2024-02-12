@@ -74,13 +74,3 @@ int Account::get_accountNum(){
 char Account::get_type(){
     return type;
 }
-
-int main() {
-    Account person;
-    person.createAccount();
-    person.displayAccount();
-    person.deposite(10000);
-    cout << "Balance: " << person.get_balance() << endl;
-    person.report();
-    return 0;
-}
