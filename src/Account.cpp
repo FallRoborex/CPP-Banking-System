@@ -15,6 +15,7 @@ public:
     void deposite(double amount);
     void withdrawl(double amount);
     double get_balance();
+    void report() const;
 };
 
 
@@ -53,17 +54,16 @@ void Account::withdrawl(double value){
     else {
         cout << "withdrawl completed" << endl;
     }
+}
 
-
+void Account::report() const{
+    cout << "Account Number" << setw(10) << " " << "Name" << setw(10) << " " << type << setw(6) << " Balance" << endl;
+    cout << account_number << setw(21) << " " << name << setw(10) << " " << type << setw(6) << balance << endl;
 }
 
 double Account::get_balance(){
     return balance;
 }
-
-
-
-
 
 int main() {
     Account person;
@@ -71,5 +71,6 @@ int main() {
     person.displayAccount();
     person.deposite(10000);
     cout << "Balance: " << person.get_balance() << endl;
+    person.report();
     return 0;
 }
