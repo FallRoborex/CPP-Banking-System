@@ -16,6 +16,8 @@ public:
     void withdrawl(double amount);
     double get_balance();
     void report() const;
+    int get_accountNum();
+    char get_type();
 };
 
 
@@ -57,12 +59,20 @@ void Account::withdrawl(double value){
 }
 
 void Account::report() const{
-    cout << "Account Number" << setw(10) << " " << "Name" << setw(10) << " " << type << setw(6) << " Balance" << endl;
-    cout << account_number << setw(21) << " " << name << setw(10) << " " << type << setw(6) << balance << endl;
+    cout<<account_number<<setw(10)<<" "<<name<<setw(10)<<" "<<type<<setw(6)<<balance<<endl;
+    // cout << account_number << setw(21) << " " << name << setw(10) << " " << type << setw(6) << balance << endl;
 }
 
 double Account::get_balance(){
     return balance;
+}
+
+int Account::get_accountNum(){
+    return account_number;
+}
+
+char Account::get_type(){
+    return type;
 }
 
 int main() {
